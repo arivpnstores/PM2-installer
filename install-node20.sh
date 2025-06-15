@@ -19,14 +19,22 @@ apt install -y curl software-properties-common
 echo -e "${GREEN}[INFO]${NC} Menambahkan repo Node.js v20..."
 curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
 
-echo -e "${GREEN}[INFO]${NC} Menginstal Node.js v20 dan npm..."
+echo -e "${GREEN}[INFO]${NC} Menginstal Node.js v20..."
 apt install -y nodejs
 
-# Verifikasi
+echo -e "${GREEN}[INFO]${NC} Menginstal npm..."
+apt install -y npm
+
 echo -e "${GREEN}[INFO]${NC} Versi Node.js:"
 node -v
 
 echo -e "${GREEN}[INFO]${NC} Versi npm:"
 npm -v
 
-echo -e "${GREEN}[SELESAI]${NC} Node.js v20 dan npm berhasil diinstal!"
+echo -e "${GREEN}[INFO]${NC} Menginstal PM2..."
+npm install -g pm2
+
+echo -e "${GREEN}[INFO]${NC} Versi PM2:"
+pm2 -v
+
+echo -e "${GREEN}[SELESAI]${NC} Node.js v20, npm, dan PM2 berhasil diinstal!"
