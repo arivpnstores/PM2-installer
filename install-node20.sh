@@ -24,7 +24,7 @@ apt install -y nodejs
 
 echo -e "${GREEN}[INFO]${NC} Menginstal npm..."
 apt install -y npm
-
+npm install -g npm@11.4.2
 echo -e "${GREEN}[INFO]${NC} Versi Node.js:"
 node -v
 
