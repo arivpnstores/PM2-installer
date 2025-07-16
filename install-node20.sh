@@ -33,7 +33,7 @@ npm -v
 
 echo -e "${GREEN}[INFO]${NC} Menginstal PM2..."
 npm install -g pm2
-
+pm2 update
 echo -e "${GREEN}[INFO]${NC} Versi PM2:"
 pm2 -v
 
